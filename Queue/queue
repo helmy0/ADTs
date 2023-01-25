@@ -1,0 +1,41 @@
+queue = [None for i in range(10)]
+
+head = 0
+tail = 0
+item = 0
+
+
+
+def queue_in(item):
+    global tail
+    if tail == head and queue[tail]!=None:
+        print('error queue is full')
+    elif tail == len(queue) - 1:
+        tail = 0
+        queue[tail] = item   
+    else:
+        queue[tail+1] = item
+        tail += 1
+        
+def queue_pop():
+    global head
+    queue[head+1] = None
+    if head == len(queue) - 1:
+        head = -1
+    elif head == tail:
+        return
+    else:
+        head +=1
+    print(head)
+
+    
+
+while item != -1:
+    
+    if input("pop or in") == 'pop':
+        queue_pop()
+        print(head,tail,'\n' ,queue)
+    else:
+        item = int(input("Please enter a number"))
+        queue_in(item)
+        print(head,tail,'\n' ,queue)
