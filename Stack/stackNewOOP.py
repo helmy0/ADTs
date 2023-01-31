@@ -8,7 +8,7 @@ class stack():
     def add(self, value):
     
         if self.arr[len(self.arr) - 1] != None:
-            print(f'The queue is full... \n {self.arr}')
+            print(f'The stack is full... \n {self.arr}')
             return self.arr           
         else:
             self.arr[self.currPointer] = value
@@ -17,7 +17,7 @@ class stack():
     def pop(self):
         self.currPointer = self.currPointer - 1 
         if self.arr[0] == None:
-            print('The queue is empty... \n {self.arr}')
+            print('The stack is empty... \n {self.arr}')
         else:
             self.arr[self.currPointer] = None
             print(self.arr) 
