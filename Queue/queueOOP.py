@@ -29,9 +29,6 @@ class queue():
                 self.head += 1
             print(f'The updated queue is  \n {self.arr}')
     
-      
-
-
 
 
     
